@@ -19,6 +19,7 @@ choresRouter.route('/').get(function(req, res) {
         if (err) {
             console.log(err);
         } else {
+            console.log(chores);
             res.json(chores);
         }
     });
