@@ -1,0 +1,6 @@
+{
+    "MONGODB_URI": " mongodb+srv://Vishwa118:VhJZrtvGDWadHhSH@cluster0.wcd88.mongodb.net/HelpingHands1?retryWrites=true&w=majority",
+    "jwtSecret": "mysecrettoken",
+    "githubClientId": "49594c988ce82ae02e3b",
+    "githubSecret": "c63c2fe0a0a8fd151e19b8848000e079268ac71e"
+}

@@ -1,0 +1,101 @@
+.header1{
+    margin-top: 60px;
+}
+
+.headerTitles1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Lora', serif;
+    color: #444;
+}
+.headerTitleSmall1{
+    position: absolute;
+    top:18%;
+    font-size: 20px;
+}
+.headerTitleLarge1{
+    position: absolute;
+    top:20%;
+    font-size: 50px;
+}
+.headerImg1{
+    width: 100%;
+    height: 400px;
+    margin-top: 65px;
+    object-fit: cover;
+}
+
+.mainDivCategories1{
+    flex:9;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    
+}
+.post1{
+    width: 585px;
+    border: 1px solid black;
+    margin: 0px 25px 40px 25px;
+}
+.postImage1{
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 7px;
+}
+.postInfo1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.postCat1{
+    font-family: 'Varela Round', sans-serif;
+    font-size: 11px;
+    color: #be9646;
+    line-height: 20px;
+    margin-top: 15px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.submitBtn{
+    padding: 5px 10px;
+  font-size: 16px;
+  /* background-color: #CB2D6F; */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-left: 10px;
+}
+.postTitle1{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.postDate1{
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 13px;
+    margin-top: 15px;
+    color: #999;
+}
+.postDesc1{
+    /* font-family: 'Varela Round', sans-serif;
+    font-size: 14px;
+    color: #444;
+    line-height: 24px;
+    margin-top: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;   
+     */
+     /* display:block; */
+     /* margin-left: 1rem; */
+     display: list-item;
+     list-style-type: disc;
+     margin-left: 2rem;
+}
