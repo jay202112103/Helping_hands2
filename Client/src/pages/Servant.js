@@ -1,30 +1,32 @@
-// import TopBar from '../topbar/Topbar'
-import React from 'react';
+import React, {Component} from 'react';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Card from '@material-ui/core/Card';
+import RequestCreateChore from '../components/chore-components/RequestCreateChore';
+import Chorelist from '../components/chore-components/chorelist';
+import RequestCompleteChore from '../components/chore-components/RequestCompleteChore';
+import RequestNotAccepted from '../components/chore-components/RequestNotAccepted'
 
-import axios from 'axios';
+class RequestLanding extends Component {
+    render(){
+        return(
+            <React.Fragment>
+                <CssBaseline/>
+                {/* <Card style={{padding: 20, margin: 20}}>
+                    <RequestCreateChore/>
+                </Card> */}
+                <Card style={{padding: 20, margin: 20}}>
+                    <Chorelist/>
+                </Card>
+                {/* <Card style={{padding: 20, margin: 20}}>
+                    <RequestAcceptChore/>
+                </Card>
+                <Card style={{padding: 20, margin: 20}}>
+                    <RequestCompleteChore/>
+                </Card> */}
 
-export default class Servant extends React.Component {
- state = {
-  posts: []
- }
-
- componentDidMount() {
-  axios.get(`https://localhost:5000/chore`)
- .then(res => {
-    const posts = res.data;
-    console.log(res);
-    this.setState({ posts });
-   })
- }
-
- render() {
-  return (
-    <div>
-        
-   <ul>
-    { this.state.posts.map(post => <li>{post.title}</li>)}
-   </ul>
-   </div>
-  )
- }
+            </React.Fragment>
+        )
+    }
 }
+
+export default RequestLanding
