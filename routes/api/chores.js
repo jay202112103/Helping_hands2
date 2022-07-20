@@ -18,10 +18,20 @@ choresRouter.route('/').get(function(req, res) {
     Chore.find(function(err, chores) {
         if (err) {
             console.log(err);
+
         } else {
-            res.json(chores);
+           
+            // res.json(chores);
+            res.send(chores);
         }
+        
     });
+    // const chores =  Chore.find({});
+    //     //res.send(services);
+    //     return res.json({
+    //         status:'ok',
+    //         data: chores
+    //     })
 });
 
 choresRouter.route(':id').get(function(req, res) {

@@ -17,10 +17,10 @@ import Moment from 'react-moment'
 
 const Chore = props => (
     <tr>
-        <td className={props.chore.chore_completed ? 'completed' : ''}>{props.chore.chore_description}</td>
-        <td className={props.chore.chore_completed ? 'completed' : ''}>{props.chore.chore_responsible}</td>
-        <td className={props.chore.chore_completed ? 'completed' : ''}>{props.chore.chore_address[0].formattedAddress}</td>
-        <td className={props.chore.chore_completed ? 'completed' : ''}>{props.chore.chore_phone}</td>
+        <td className={props.chore.chore_completed ? 'completed' : ''}>{props.chore.first_name}</td>
+        <td className={props.chore.chore_completed ? 'completed' : ''}>{props.chore.last_name}</td>
+        {/* <td className={props.chore.chore_completed ? 'completed' : ''}>{props.chore.chore_address[0].formattedAddress}</td>
+        <td className={props.chore.chore_completed ? 'completed' : ''}>{props.chore.chore_phone}</td> */}
         <td>
             <Link to={"/edit/"+props.chore._id}>Edit</Link>
         </td> 
@@ -38,6 +38,7 @@ const RequestedChore = (props) => (
                     <CardActionArea>
                     <Card style={{backgroundColor:'#cb2d6f'}} >
                         <Grid  container spacing={4} padding={5}>
+                            <h1>HEllo</h1>
                             <Grid item xs={12} md={6}>
                                 <Hidden smDown>
                                     <img 
@@ -52,7 +53,7 @@ const RequestedChore = (props) => (
                                         {props.chore.chore_description}
                                     </Typography>
                                     <Typography style={{color:'#cccccc'}} variant="h5" component="h3" gutterBottom>
-                                        Who Needs Help: {props.chore.chore_responsible}
+                                        Who Needs Help: {props.chore.first_name}
                                     </Typography>
                                     {/* <Typography style={{color:'#cccccc'}} variant="h5" gutterBottom>
                                         Chore Address: {props.chore.chore_address[0].formattedAddress}
@@ -86,9 +87,11 @@ class ChoresList extends React.Component {
     }
     
     componentDidMount() {
-        axios.get('/chore')
+        axios.get('http://localhost:5000/chore')
             .then(response => {
                 this.setState({chores: response.data});
+                console.log(response.data);
+                console.log("hello")
             })
             .catch(function (error) {
                 console.log(error);
