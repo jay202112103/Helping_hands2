@@ -98,11 +98,13 @@ class Servant extends React.Component {
    
         return (
         <div className = "App">
-            <h1> Fetch data from an api in react </h1>  {
+              {
                 items.map((item) => ( 
                 <ol key = { item.id } >
-                    User_Name: { item.name }, 
-                    Full_Name: { item.email}, 
+                    First_Name: { item.firstName}, 
+                    Last_Name: { item.firstName}, 
+                    Email: { item.email}, 
+                    Service_type: { item.service_type}, 
                     
                     </ol>
                 ))
